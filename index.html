@@ -8,34 +8,80 @@
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swipe@7/swiper-bundle.min.css" />
+
     <!--custom css file link-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-</body>
+
 
 <!--header section starts-->
 
 <header class="header">
 
-    <a href="#" class="logo"> <span>BE</span>FIT </a>
+    <a href="#" class="logo"> 
+        <img src="images/ir-fit-logo-2023.png" alt="">
+    </a>
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#features">features</a>
-        <a href="#pricing">pricing</a>
-        <a href="#trainers">trainers</a>
-        <a href="#blog">blog</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#features">FEATURES</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#trainers">TRAINERS</a>
+        <a href="#blog">BLOG</a>
     </nav>
 
 </header>
 
 <!--header section ends-->
 
+<!-- home section starts-->
+
+<section class="home" id="home">
+
+    <div class="swiper home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" style="background: url(images/home-bg-1.jpg) no-repeat;">
+                <div class="content">
+                    <span> be STRONG, be FIT</span>
+                    <h3>Make yourself stronger than your excuses.</h3>
+                    <a href="#" class="btn">GET STARTED</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/home-bg-2.jpg) no-repeat;">
+                <div class="content">
+                    <span> be strong, be fit</span>
+                    <h3>Make yourself stronger than your excuses.</h3>
+                    <a href="#" class="btn">get started</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
+                <div class="content">
+                    <span> be strong, be fit</span>
+                    <h3>Make yourself stronger than your excuses.</h3>
+                    <a href="#" class="btn">get started</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+
+<!-- home section ends -->
 
 
 
@@ -52,9 +98,11 @@
 
 
 
+<script src="https://unpkg.com/swipe@7/swiper-bundle.min.js"></script>
 
 
 <!--custom js file link-->
 <script src="script.js"></script>
 
+</body>
 </html>

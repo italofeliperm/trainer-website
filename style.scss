@@ -6,7 +6,6 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none; border: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 
@@ -20,7 +19,6 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-    overflow: hidden;
 
     &::-webkit-scrollbar{
         width: 1rem;
@@ -39,6 +37,26 @@ body{
     background: $black;
 }
 
+section{
+    padding: 5rem 9%;
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    padding-right: 3rem;
+    background: linear-gradient(130deg, $red 93%, transparent 90%);
+    color: $white;
+    cursor: pointer;
+    font-size: 1.7rem;
+
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+
 .header{
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -49,12 +67,12 @@ body{
     background: $black;
 
     .logo{
-        font-weight: bolder;
-        color: $white;
-        font-size: 3rem;
+        max-width: 80px;
+        max-height: 80px;
+        padding: 2rem;
 
-        span{
-            color: $red;
+        img{
+            height: 100%; width: 100%;
         }
     }
 
@@ -63,8 +81,9 @@ body{
         padding: 1.5rem 2rem;
         font-size: 1.7rem;
         color: $white;
+        text-decoration: none;
 
-        &hover{
+        &:hover{
             background: $red;
         }
     }
@@ -77,9 +96,48 @@ body{
     display: none;
 }
 
+.home{
+    padding: 0;
+    margin-top: 6.5rem;
 
+    .slide{
+        min-height: 70vh;
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
 
+        .content{
+            width: 60rem;
 
+            span{
+                font-size: 2rem;
+                color: $red;
+                display: block;
+                text-decoration: none;
+            }
+
+            h3{
+                font-size: 5rem;
+                color: $white;
+                padding: 1rem 0;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet{
+    height: 2rem;
+    width: 2rem;
+    background: $white;
+    border-radius: 0;
+
+    &.swiper-pagination-bullet-active{
+        background: $red;
+    }
+}
 
 
 
@@ -104,12 +162,20 @@ body{
         padding: 0 2rem;
     }
 
+    section{
+        padding: 3rem 2rem;
+    }
+
 }
 
 @media (max-width:768px){
 
     #menu-btn{
         display: inline-block;
+
+        &.fa-times{
+            transform: rotate(180deg);
+        }
     }
 
     .header{
@@ -121,9 +187,14 @@ body{
             background: $black;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
             a{
                 display:block;
                 font-size: 2rem;
+                text-decoration: none;
             }
         }
     }
