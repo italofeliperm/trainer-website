@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
   outline: none;
   border: none;
   transition: all 0.2s linear;
@@ -56,6 +55,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 0 9%;
+  z-index: 5000;
   background: #000;
 }
 .header .logo {
@@ -104,7 +104,6 @@ section {
   font-size: 2rem;
   color: #f00;
   display: block;
-  text-decoration: none;
 }
 .home .slide .content h3 {
   font-size: 5rem;
@@ -123,6 +122,74 @@ section {
   background: #f00;
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+.about .image {
+  flex: 1 1 42rem;
+  max-width: 60%;
+  max-height: 60%;
+  position: relative;
+}
+.about .image::before, .about .image::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  background: #f00;
+  height: 15rem;
+  width: 15rem;
+}
+.about .image::before {
+  top: 0;
+  left: 0;
+}
+.about .image::after {
+  bottom: 0;
+  right: 0;
+}
+.about .image img {
+  width: 100%;
+  padding: 2rem;
+}
+.about .content {
+  flex: 1 1 42rem;
+}
+.about .content span {
+  font-size: 2rem;
+  color: #f00;
+}
+.about .content .title {
+  font-size: 4rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.about .content p {
+  font-size: 1.5rem;
+  color: #aaa;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.about .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.about .content .box-container .box {
+  flex: 1 1 20rem;
+}
+.about .content .box-container .box h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+.about .content .box-container .box h3 i {
+  padding-right: 1.5rem;
+  color: #f00;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -132,6 +199,15 @@ section {
   }
   section {
     padding: 3rem 2rem;
+  }
+  .home .slide {
+    padding: 2rem 5%;
+  }
+  .home .slide .content {
+    width: 50rem;
+  }
+  .home .slide .content h3 {
+    font-size: 4rem;
   }
 }
 @media (max-width: 768px) {
@@ -161,6 +237,15 @@ section {
     display: block;
     font-size: 2rem;
     text-decoration: none;
+  }
+  .about {
+    gap: 3rem;
+  }
+  .about .image {
+    margin-top: 5rem;
+  }
+  .about .content .title {
+    font-size: 3rem;
   }
 }
 @media (max-width: 450px) {

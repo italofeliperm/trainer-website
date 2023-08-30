@@ -4,7 +4,6 @@
     font-family: 'Nunito', sans-serif;
     margin: 0; padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     outline: none; border: none;
     transition: all .2s linear;
 }
@@ -64,6 +63,7 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 0 9%;
+    z-index: 5000;
     background: $black;
 
     .logo{
@@ -115,7 +115,6 @@ section{
                 font-size: 2rem;
                 color: $red;
                 display: block;
-                text-decoration: none;
             }
 
             h3{
@@ -139,7 +138,87 @@ section{
     }
 }
 
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
 
+    .image{
+        flex: 1 1 42rem;
+        max-width: 60%;
+        max-height: 60%;
+        position: relative;
+
+
+        &::before,
+        &::after{
+            content:' ';
+            position: absolute;
+            z-index: -1;
+            background: $red;
+            height: 15rem;
+            width: 15rem;
+        }
+
+        &::before{
+            top: 0; left: 0;
+        }
+
+        &::after{
+            bottom: 0; right: 0;
+        }
+        
+
+        img{
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    .content{
+        flex: 1 1 42rem;
+
+        span{
+            font-size: 2rem;
+            color: $red;
+        }
+
+        .title{
+            font-size: 4rem;
+            color: $white;
+            margin-top: .5rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            color: $light-white;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+
+        .box-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1rem;
+
+            .box{
+                flex:1 1 20rem;
+
+                h3{
+                    font-size: 2rem;
+                    color:$white;
+
+                i{
+                    padding-right: 1.5rem;
+                    color: $red;
+                }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -164,6 +243,18 @@ section{
 
     section{
         padding: 3rem 2rem;
+    }
+
+    .home .slide{
+        padding: 2rem 5%;
+
+        .content{
+            width: 50rem;
+
+            h3{
+                font-size: 4rem;
+            }
+        }
     }
 
 }
@@ -196,6 +287,18 @@ section{
                 font-size: 2rem;
                 text-decoration: none;
             }
+        }
+    }
+
+    .about{
+        gap: 3rem;
+
+        .image{
+            margin-top: 5rem;
+        }
+
+        .content .title{
+            font-size: 3rem;
         }
     }
     
