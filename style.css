@@ -135,7 +135,7 @@ section {
   position: relative;
 }
 .about .image::before, .about .image::after {
-  content: " ";
+  content: "";
   position: absolute;
   z-index: -1;
   background: #f00;
@@ -236,13 +236,16 @@ section {
   .header .navbar a {
     display: block;
     font-size: 2rem;
-    text-decoration: none;
   }
   .about {
     gap: 3rem;
+    flex-direction: column;
   }
   .about .image {
-    margin-top: 5rem;
+    margin-top: 0;
+  }
+  .about .content .box-container {
+    align-items: center;
   }
   .about .content .title {
     font-size: 3rem;
