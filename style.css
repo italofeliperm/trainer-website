@@ -59,8 +59,8 @@ section {
   background: #000;
 }
 .header .logo {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 100px;
+  max-height: 100px;
   padding: 2rem;
 }
 .header .logo img {
@@ -130,8 +130,8 @@ section {
 }
 .about .image {
   flex: 1 1 42rem;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 50%;
+  max-height: 50%;
   position: relative;
 }
 .about .image::before, .about .image::after {
@@ -218,7 +218,7 @@ section {
     transform: rotate(180deg);
   }
   .header {
-    padding: 2rem;
+    padding: 1rem;
   }
   .header .navbar {
     position: absolute;
@@ -239,10 +239,9 @@ section {
   }
   .about {
     gap: 3rem;
-    flex-direction: column;
   }
   .about .image {
-    margin-top: 0;
+    margin-top: 5rem;
   }
   .about .content .box-container {
     align-items: center;
